@@ -30,12 +30,18 @@ model wallet {
 }
 
 model projects {
-  id           Int    @id @default(autoincrement())
-  name         String
-  api_token    String @unique
-  token_secret String @unique
-  status       String
-  id_user      Int
+  id      Int    @id @default(autoincrement())
+  name    String
+  status  String
+  id_user Int
+}
+
+model apiToken {
+  id         Int    @id @default(autoincrement())
+  apiToken   String @unique
+  secretKey  String @unique
+  status     String
+  id_user    Int
 }
 
 model transactions {
@@ -43,7 +49,7 @@ model transactions {
   transaction    Int
   send_card      BigInt
   accept_card    BigInt
-  project_id     Int    
+  project_id     Int
   date           DateTime
   pay_url        String
   status         String

@@ -3,8 +3,18 @@
     <hr>
     {{#ifEqual title 'Projects'}}
     <ul>
-        <li><i class="bi bi-plus-circle"></i> Create</li>
-        <li> <i class="bi bi-grid"></i> <span>Project name</span> </li>
+        <a href="/users/personal/create">
+            <li>
+                <i class="bi bi-plus-circle"></i> Create
+            </li>
+        </a>
+        {{#each project}}
+        <li>
+            <a href="/users/personal/dashboard/{{name}}" class="truncated-text">
+                <i class="bi bi-grid"></i>{{name}}
+            </a>
+        </li>
+        {{/each}}
     </ul>
     {{/ifEqual}}
     {{#ifEqual title 'Send'}}
@@ -20,12 +30,30 @@
     {{/ifEqual}}
     {{#ifEqual title 'API token'}}
     <ul>
-        <li><i class="bi bi-plus-circle"></i> Create</li>
+        <a href="/users/personal/generateapitoken">
+            <li><i class="bi bi-key"></i> Generate New</li>
+        </a>
     </ul>
     {{/ifEqual}}
     {{#ifEqual title 'Settings'}}
     <ul>
-        <li><i class="bi bi-gear"></i> Settings</li>
+        <li><i class="bi bi-lock"></i> Change password</li>
+    </ul>
+    {{/ifEqual}}
+    {{#ifEqual title 'Create'}}
+    <ul>
+        <a href="/users/personal/create">
+            <li>
+                <i class="bi bi-plus-circle"></i> Create
+            </li>
+        </a>
+        {{#each project}}
+        <li>
+            <a href="/users/personal/dashboard/{{name}}" class="truncated-text">
+                <i class="bi bi-grid"></i>{{name}}
+            </a>
+        </li>
+        {{/each}}
     </ul>
     {{/ifEqual}}
 </aside>

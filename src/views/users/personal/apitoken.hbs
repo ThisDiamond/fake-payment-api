@@ -1,1 +1,23 @@
-api token
+<h2 class="title"> All Api Token and Secret key</h2>
+
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Api token </th>
+            <th> Secret Key </th>
+            <th> Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each apiTokens}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{apiToken}}</td>
+            <td>{{secretKey}}</td>
+            <td>{{status}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

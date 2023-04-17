@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: #252525;
-} 
+}
 
 body {
     width: 100%;
@@ -73,6 +73,7 @@ main {
     font-size: x-large;
     gap: 0 12px;
 }
+
 .user i {
     margin-right: 5px;
 }
@@ -86,11 +87,12 @@ main {
     border-radius: 50px;
     font-size: medium;
 }
+
 .avatar i {
     font-size: large;
 }
 
-.logout{
+.logout {
     background-color: #EEEEEE;
     padding: 7px 12px;
     border-radius: 100px;
@@ -298,14 +300,27 @@ aside hr {
     border: 1px solid #dfdfdf;
 }
 
+aside ul a {
+    text-decoration: none;
+}
+
 aside ul li:hover {
     background-color: #eeeeee;
 }
 
-aside ul li i{
+aside ul li i {
     font-size: large;
     margin: 0 10px;
 }
+
+.truncated-text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+
 section {
     width: 100%;
     height: 100%;
@@ -341,4 +356,24 @@ th {
 th {
     background-color: #EEEEEE;
 }
-/*test*/
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.width-md {
+    width: 400px;
+}
+
+button.wide {
+    width: 100%;
+}

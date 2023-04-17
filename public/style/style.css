@@ -1,0 +1,343 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+} 
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEEE
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.nav {
+    min-height: 30px;
+    display: flex;
+    gap: 0 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    transition: all 500ms;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #252525;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid #252525;
+    border-radius: 1%;
+}
+
+.logo-area {
+    font-size: x-large;
+}
+
+.logo-area span {
+    font-weight: 600;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0 0 20px;
+    font-size: x-large;
+    gap: 0 12px;
+}
+.user i {
+    margin-right: 5px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #EEEEEE;
+    padding: 7px 15px;
+    border-radius: 50px;
+    font-size: medium;
+}
+.avatar i {
+    font-size: large;
+}
+
+.logout{
+    background-color: #EEEEEE;
+    padding: 7px 12px;
+    border-radius: 100px;
+    font-size: large;
+}
+
+header .sign-in-index {
+    display: flex;
+    gap: 0 20px;
+}
+
+header .sign-in-index a {
+    color: #252525;
+    padding: 7px 21px;
+    text-decoration: none;
+    border: 1px solid #252525;
+    border-radius: 3px;
+}
+
+
+.form-sign {
+    background-color: white;
+    width: 500px;
+    min-height: 30vh;
+    margin: auto;
+    padding: 45px 75px;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 3px;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign h3 {
+    align-self: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sign h3 a {
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.sign h3 span {
+    background-color: #252525;
+    color: white;
+    padding: 3px 21px;
+    text-decoration: none;
+    align-self: center;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: 500ms;
+}
+
+/* unvisited link */
+.sign h3 a:link {
+    color: #252525;
+}
+
+/* visited link */
+.sign h3 a:visited {
+    color: #252525;
+}
+
+/* mouse over link */
+.sign h3 a:hover {
+    color: rgb(107, 107, 107);
+}
+
+/* selected link */
+.sign h3 a:active {
+    color: blue;
+
+}
+
+.sign hr {
+    width: 96%;
+    border: 1px solid #bdbdbd;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sign .input-wrapper input {
+    width: 100%;
+    height: 40px;
+    padding: 7px 21px;
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    outline: none;
+}
+
+.sign select {
+    color: #a6a6a6;
+    width: 100%;
+    height: 40px;
+    padding: 7px 21px;
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    outline: none;
+}
+
+.sign select option {
+    border-radius: 3px;
+}
+
+.sign button {
+    align-self: center;
+    background-color: #252525;
+    color: white;
+    width: fit-content;
+    height: 40px;
+    padding: 7px 42px;
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* personal */
+
+.wrapper {
+    width: 960px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-area {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    overflow-y: auto;
+    background-color: white;
+    min-width: 450px;
+    min-height: 220px;
+    max-height: 220px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.history {
+    overflow-y: auto;
+    background-color: white;
+    min-width: 450px;
+    min-height: 250px;
+    max-height: 720px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.card.balans h3 {
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.card.balans h3 span {
+    font-weight: 700;
+}
+
+/* user aside */
+aside {
+    min-width: 220px;
+    max-width: 250px;
+    height: 100%;
+    background-color: white;
+    align-self: baseline;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+aside .title {
+    align-self: center;
+    padding: 12px;
+    font-weight: 500;
+}
+
+aside ul li {
+    list-style-type: none;
+    width: 100%;
+    min-height: 60px;
+    padding: 15px;
+    transition: 500ms;
+}
+
+aside hr {
+    border: 1px solid #dfdfdf;
+}
+
+aside ul li:hover {
+    background-color: #eeeeee;
+}
+
+aside ul li i{
+    font-size: large;
+    margin: 0 10px;
+}
+section {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+section .title {
+    align-self: center;
+    padding: 12px;
+    font-weight: 500;
+}
+
+section hr {
+    border: 1px solid #dfdfdf;
+}
+
+table {
+    margin: 1%;
+    width: 98%;
+}
+
+table,
+td,
+th {
+    border: 1px solid #a8a8a83d;
+    border-collapse: collapse;
+    padding: 10px 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+th {
+    background-color: #EEEEEE;
+}

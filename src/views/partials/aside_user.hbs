@@ -1,0 +1,31 @@
+<aside>
+    <h2 class="title">{{title}}</h2>
+    <hr>
+    {{#ifEqual title 'Projects'}}
+    <ul>
+        <li><i class="bi bi-plus-circle"></i> Create</li>
+        <li> <i class="bi bi-grid"></i> <span>Project name</span> </li>
+    </ul>
+    {{/ifEqual}}
+    {{#ifEqual title 'Send'}}
+    <ul>
+        <li><i class="bi bi-send"></i> Send</li>
+        <li><i class="bi bi-list-ol"></i> <span>Contact</span> </li>
+    </ul>
+    {{/ifEqual}}
+    {{#ifEqual title 'Transaction'}}
+    <ul>
+        <li><i class="bi bi-wallet2"></i> Transaction</li>
+    </ul>
+    {{/ifEqual}}
+    {{#ifEqual title 'API token'}}
+    <ul>
+        <li><i class="bi bi-plus-circle"></i> Create</li>
+    </ul>
+    {{/ifEqual}}
+    {{#ifEqual title 'Settings'}}
+    <ul>
+        <li><i class="bi bi-gear"></i> Settings</li>
+    </ul>
+    {{/ifEqual}}
+</aside>

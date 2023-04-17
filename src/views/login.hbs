@@ -1,0 +1,19 @@
+<main>
+    <div class="form-sign">
+        <form action="/login" method="post" class="sign">
+            <h3><a href="/register">Register</a> | <span>Login</span>  </h3>
+            <hr />
+            {{#if msgFlash}}
+            <p style=" background-color: rgb(255, 219, 226);padding:6px 24px; color: crimson; font-size:medium">
+                {{msgFlash}}</p>
+            {{/if}}
+            <div class="input-wrapper">
+                <input name="email" type="email" placeholder="Email:*">
+            </div>
+            <div class="input-wrapper">
+                <input name="password" type="password" placeholder="Password:*">
+            </div>
+            <button type="submit">login</button>
+        </form>
+    </div>
+</main>

@@ -7,6 +7,8 @@ export default async (req: Request, res: Response, next: NextFunction) => {
     res.render("users/personal/apitoken", {
         title: 'API token',
         apiTokens,
+        userName: res.locals.user_name,
+        amount: res.locals.amount,
         usermode: true
     })
 };

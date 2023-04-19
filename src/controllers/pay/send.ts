@@ -11,8 +11,9 @@ export default async (req: Request, res: Response, next: NextFunction) => {
         const accept_user = await getWalletbyAddress(Number(card_accept))
         const send_user = await getWalletbyAddress(Number(card_send))
 
-        const accept_id_user = accept_user?.id_user
-        const send_id_user = send_user?.id_user
+        const project_id = 1
+        const id_user = res.locals.id_user
+
 
         const send_transaction =
             await send(
@@ -23,11 +24,11 @@ export default async (req: Request, res: Response, next: NextFunction) => {
 
         if (send_transaction) {
             await saveTransaction(
-                Number(card_accept),
                 Number(transfer_sum),
                 Number(card_send),
-                Number(send_id_user),
-                Number(accept_id_user)
+                Number(card_accept),
+                Number(project_id),
+                Number(id_user)
             )
         }
 

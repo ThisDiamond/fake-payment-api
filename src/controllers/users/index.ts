@@ -6,4 +6,6 @@ export { default as apitoken } from './apitoken'
 export { default as settings } from './settings'
 export { default as create } from './create'
 export { default as postCreate } from './postCreate'
+
 export { default as getGenerateapikey } from './getGenerateapikey'
+export { default as getProject } from './getProjects'

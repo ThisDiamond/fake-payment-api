@@ -61,23 +61,22 @@ export async function send(card_accept: number, transfer_sum: number, card_send:
 }
 
 export function saveTransaction(
-    card_accept: number,
     transfer_sum: number,
     card_send: number,
-    send_id_user: number,
-    accept_id_user: number
+    card_accept: number,
+    project_id: number,
+    id_user: number
 ) {
     return prisma.transactions.create({
         data: {
-            transaction: transfer_sum,
+            date: new Date(),
+            transfer: transfer_sum,
             send_card: card_send,
-            date: new Date,
             accept_card: card_accept,
-            project_id: 0,
-            status: 'Complated',
             pay_url: 'test',
-            send_id_user: send_id_user,
-            accept_id_user: accept_id_user
+            status: 'Complated',
+            project_id: project_id,
+            id_user: id_user
         }
     })
 }
@@ -87,8 +86,8 @@ export async function getTransactionbyUserId(id_user: number) {
         const transactions = await prisma.transactions.findMany({
             where: {
                 OR: [
-                    { accept_id_user: id_user },
-                    { send_id_user: id_user }
+                    // { accept_id_user: id_user },
+                    // { send_id_user: id_user }
                 ]
             }
         })

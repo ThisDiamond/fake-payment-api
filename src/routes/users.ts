@@ -8,6 +8,7 @@ router.get("/users/personal", isAuthentication, personal)
 router.get("/users/personal/dashboard", isAuthentication, dashboard)
 router.get("/users/personal/send", isAuthentication, send)
 router.get("/users/personal/transaction", isAuthentication, transaction)
+router.get("/users/personal/transaction/:project", isAuthentication, transaction)
 router.get("/users/personal/apitoken", isAuthentication, apitoken)
 router.get("/users/personal/settings", isAuthentication, settings)
 

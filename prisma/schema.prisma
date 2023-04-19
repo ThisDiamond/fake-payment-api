@@ -30,10 +30,10 @@ model wallet {
 }
 
 model projects {
-  id      Int    @id @default(autoincrement())
-  name    String
-  status  String
-  id_user Int
+  id         Int    @id @default(autoincrement())
+  name       String
+  status     String
+  id_user    Int
 }
 
 model apiToken {
@@ -41,18 +41,18 @@ model apiToken {
   apiToken   String @unique
   secretKey  String @unique
   status     String
+  id_project Int
   id_user    Int
 }
 
 model transactions {
-  id             Int      @id @default(autoincrement())
-  transaction    Int
-  send_card      BigInt
-  accept_card    BigInt
-  project_id     Int
-  date           DateTime
-  pay_url        String
-  status         String
-  send_id_user   Int
-  accept_id_user Int
+  id          Int      @id @default(autoincrement())
+  date        DateTime
+  transfer    Int
+  send_card   BigInt
+  accept_card BigInt
+  pay_url     String
+  status      String
+  project_id  Int
+  id_user     Int
 }

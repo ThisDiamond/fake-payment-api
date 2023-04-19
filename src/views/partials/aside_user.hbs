@@ -10,22 +10,28 @@
         </a>
         {{#each project}}
         <li>
-            <a href="/users/personal/dashboard/{{name}}" class="truncated-text">
+            <a href="/users/personal/transaction/{{name}}" class="truncated-text">
                 <i class="bi bi-grid"></i>{{name}}
             </a>
         </li>
         {{/each}}
     </ul>
     {{/ifEqual}}
-    {{#ifEqual title 'Send'}}
+    {{!-- {{#ifEqual title 'Send'}}
     <ul>
         <li><i class="bi bi-send"></i> Send</li>
         <li><i class="bi bi-list-ol"></i> <span>Contact</span> </li>
     </ul>
-    {{/ifEqual}}
+    {{/ifEqual}} --}}
     {{#ifEqual title 'Transaction'}}
     <ul>
-        <li><i class="bi bi-wallet2"></i> Transaction</li>
+        {{#each project}}
+        <li>
+            <a href="/users/personal/transaction/{{name}}" class="truncated-text">
+                <i class="bi bi-grid"></i>{{name}}
+            </a>
+        </li>
+        {{/each}}
     </ul>
     {{/ifEqual}}
     {{#ifEqual title 'API token'}}

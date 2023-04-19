@@ -1,0 +1,47 @@
+<h2 class="title">
+    {{#if params}}
+    {{params}} |
+    {{else}}
+    All |
+    {{/if}}
+    Transactions</h2>
+<hr>
+
+
+<table>
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Client </th>
+            <th> Date </th>
+            <th> Amount </th>
+            <th> Status </th>
+            <th> Pay Url </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#if transaction}}
+        {{#each transaction}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{send_card }}</td>
+            <td>{{date}}</td>
+            <td>{{transfer}}</td>
+            <td>{{status}}</td>
+            <td>{{pay_url}}</td>
+        </tr>
+        {{/each}}
+        {{else}}
+        {{#each alltransactions}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{send_card }}</td>
+            <td>{{date}}</td>
+            <td>{{transfer}}</td>
+            <td>{{status}}</td>
+            <td>{{pay_url}}</td>
+        </tr>
+        {{/each}}
+        {{/if}}
+    </tbody>
+</table>

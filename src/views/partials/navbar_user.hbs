@@ -6,9 +6,9 @@
         <li class="nav-item">
             <a href="/users/personal/dashboard">Dashboard</a>
         </li>
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
             <a href="/users/personal/send">Send</a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a href="/users/personal/transaction">Transaction</a>
         </li>
@@ -21,9 +21,10 @@
     </ul>
     <div class="user">
         <i class="bi bi-bell"></i>
+        <i class="bi bi-wallet2"></i>
         <div class="avatar">
             <i class="bi bi-person-circle"></i>
-            Dima thiss
+            {{userName}}
         </div>
         <a href="/logout" class="logout">
             <i class="bi bi-box-arrow-right"></i>

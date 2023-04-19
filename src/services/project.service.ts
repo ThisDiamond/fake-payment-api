@@ -23,6 +23,13 @@ export async function getProjectbyUserId(id_user: number) {
         }
     })
 }
+export async function getProjectbyId(project_id: number) {
+    return await prisma.projects.findMany({
+        where: {
+            id: project_id
+        }
+    })
+}
 
 export async function getTransactionbyProjectId(project_id: number) {
     return await prisma.transactions.findMany({

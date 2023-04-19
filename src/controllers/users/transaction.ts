@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { getProjectbyUserId, getTransactionbyProjectId } from "../../services/project.service";
+import { getProjectbyUserId, getTransactionbyProjectId, getProjectbyId } from "../../services/project.service";
 import moment from "moment";
 import { PrismaClient } from "@prisma/client"
 
@@ -17,8 +17,8 @@ export default async (req: Request, res: Response, next: NextFunction) => {
         return res.render("users/personal/transaction", {
             title: 'Transaction',
             project,
-            transaction: transaction.map(transaction => ({
-                id: transaction.id,
+            transaction: transaction.map((transaction, index) => ({
+                id: index + 1,
                 date: moment(transaction.date).format('DD.MM.YYYY'),
                 transfer: transaction.transfer,
                 send_card: transaction.send_card,
@@ -37,8 +37,8 @@ export default async (req: Request, res: Response, next: NextFunction) => {
 
     res.render("users/personal/transaction", {
         title: 'Transaction',
-        alltransactions: alltransactions.map(transaction => ({
-            id: transaction.id,
+        alltransactions: alltransactions.map((transaction, index) => ({
+            id: index + 1,
             date: moment(transaction.date).format('DD.MM.YYYY'),
             transfer: transaction.transfer,
             send_card: transaction.send_card,

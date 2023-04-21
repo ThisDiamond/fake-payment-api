@@ -36,9 +36,14 @@
     {{/ifEqual}}
     {{#ifEqual title 'API token'}}
     <ul>
-        <a href="/users/personal/generateapitoken">
-            <li><i class="bi bi-key"></i> Generate New</li>
-        </a>
+
+        {{#each project}}
+        <li>
+            <a href="/users/personal/apitoken/{{name}}" class="truncated-text">
+                <i class="bi bi-grid"></i>{{name}}
+            </a>
+        </li>
+        {{/each}}
     </ul>
     {{/ifEqual}}
     {{#ifEqual title 'Settings'}}

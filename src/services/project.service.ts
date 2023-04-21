@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client"
-import crypto from 'crypto'
 
 const prisma = new PrismaClient()
 
@@ -13,7 +12,39 @@ export async function createProject(project_name: string, id_user: number) {
     })
 }
 
-export async function getProjectbyUserId(id_user: number) {
+export async function deleteProjectbyId(id_project: number) {
+    return await prisma.projects.delete({
+        where: {
+            id: id_project
+        }
+    })
+}
+
+export async function getOneProjectbyId(id: number) {
+    return await prisma.projects.findFirst({
+        where: {
+            id: id
+        }
+    })
+}
+
+export async function getAllProjectbyId(id: number) {
+    return await prisma.projects.findMany({
+        where: {
+            id: id
+        }
+    })
+}
+
+export async function getOneProjectbyIdUser(id_user: number) {
+    return await prisma.projects.findFirst({
+        where: {
+            id_user: id_user
+        }
+    })
+}
+
+export async function getAllProjectbyIdUser(id_user: number) {
     return await prisma.projects.findMany({
         where: {
             id_user: id_user
@@ -21,39 +52,10 @@ export async function getProjectbyUserId(id_user: number) {
     })
 }
 
-export async function getProjectbyId(project_id: number) {
-    return await prisma.projects.findMany({
+export async function getOneProjectbyName(project_name: string) {
+    return await prisma.projects.findFirst({
         where: {
-            id: project_id
-        }
-    })
-}
-
-export async function getTransactionbyProjectId(project_id: number) {
-    return await prisma.transactions.findMany({
-        where: {
-            project_id: project_id
-        }
-    })
-}
-
-
-export async function generateApiKey(id_project: number, id_user: number) {
-    return await prisma.apiToken.create({
-        data: {
-            apiToken: crypto.randomBytes(16).toString('hex'),
-            secretKey: crypto.randomBytes(32).toString('hex'),
-            status: 'Active',
-            id_project: id_project,
-            id_user: id_user
-        }
-    })
-}
-
-export async function getApiTokensbyUserId(id_user: number) {
-    return await prisma.apiToken.findMany({
-        where: {
-            id_user: id_user
+            name: project_name
         }
     })
 }

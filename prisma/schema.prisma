@@ -46,13 +46,13 @@ model apiToken {
 }
 
 model transactions {
-  id          Int      @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())  //
   date        DateTime
   transfer    Int
   send_card   BigInt
   accept_card BigInt
   pay_url     String
   status      String
-  project_id  Int
-  id_user     Int
+  project_id  Int                                     //
+  id_user     Int                                     //
 }

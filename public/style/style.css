@@ -457,8 +457,8 @@ button.wide {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transform:perspective(1000px) rotateY(180deg);
-    transition:transform .4s ease-out;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
 }
 
 .card-face {
@@ -535,4 +535,24 @@ button.wide {
 .table-wrapper-api {
     overflow-y: auto;
     max-height: 84vh;
+}
+
+.apitoken-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apitoken-header a {
+    background-color: #EEEEEE;
+    color: #252525;
+    margin-right: 15px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+.apitoken-header a i {
+    margin-right: 5px;
 }

@@ -1,8 +1,9 @@
 import { PrismaClient } from "@prisma/client"
+import { v4 } from 'uuid'
 
 const prisma = new PrismaClient()
 
-export function addWallet(id_user: number) {
+export function createWallet(id_user: number) {
     const amount: number = 1000000;
     const address: number = 7777707000000000 + Math.floor(Math.random() * 89999999) + 10000000;
     const code: number = Math.floor(Math.random() * 8999) + 1000;
@@ -73,27 +74,10 @@ export function saveTransaction(
             transfer: transfer_sum,
             send_card: card_send,
             accept_card: card_accept,
-            pay_url: 'test',
+            pay_url: v4(),
             status: 'Complated',
             project_id: project_id,
             id_user: id_user
         }
     })
-}
-
-export async function getTransactionbyUserId(id_user: number) {
-    try {
-        const transactions = await prisma.transactions.findMany({
-            where: {
-                OR: [
-                    // { accept_id_user: id_user },
-                    // { send_id_user: id_user }
-                ]
-            }
-        })
-        return transactions
-    } catch (err) {
-        console.error(`Error getting transactions for user ${id_user}: ${err}`)
-        throw err
-    }
 }

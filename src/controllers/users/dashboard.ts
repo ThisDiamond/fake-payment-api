@@ -1,15 +1,15 @@
 import { Request, Response, NextFunction } from "express";
-import { getProjectbyUserId } from "../../services/project.service";
 import { getUserbyUserId } from "../../services/users.service";
-import { getTransactionbyUserId, getWalletbyUserId } from "../../services/pay.service";
+import { getWalletbyUserId } from "../../services/pay.service";
 import moment from 'moment'
+import { getOneTransactionbyIdProject, getAllTransactionbyUserId } from "../../services/transaction.service";
 
 
 export default async (req: Request, res: Response, next: NextFunction) => {
     const id_user = Number(res.locals.id_user)
 
-    const project = await getProjectbyUserId(id_user)
-    const alltransactions = await getTransactionbyUserId(id_user)
+    const project = await getOneTransactionbyIdProject(id_user)
+    const alltransactions = await getAllTransactionbyUserId(id_user)
 
     const user = await getUserbyUserId(id_user)
     const wallet = await getWalletbyUserId(id_user)

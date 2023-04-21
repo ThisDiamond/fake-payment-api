@@ -1,5 +1,24 @@
-<h2 class="title"> All Api Token and Secret key</h2>
+<div class="apitoken-header">
+    <h2 class="title">
+        {{#if params}}
+        {{params}} | Api Token and Secret key
+        {{else}}
 
+        {{#if apiTokens}}
+        Select project
+        {{else}}
+        Create project
+        {{/if}}
+        
+        {{/if}}
+    </h2>
+    {{#if xatolik}}
+    <p style=" background-color: rgb(255, 219, 226);padding:6px 24px; color: crimson; font-size:medium"> {{xatolik}}</p>
+    {{/if}}
+    {{#if params}}
+    <a href="/users/personal/generateapitoken/{{projectid}}"><i class="bi bi-key"></i> Generate New </a>
+    {{/if}}
+</div>
 <hr>
 <div class="table-wrapper-api">
     <table>
@@ -8,7 +27,6 @@
                 <th> ID </th>
                 <th> Api token </th>
                 <th> Secret Key </th>
-                <th> id project </th>
                 <th> Status </th>
             </tr>
         </thead>
@@ -18,7 +36,6 @@
                 <td>{{@index}}</td>
                 <td>{{apiToken}}</td>
                 <td>{{secretKey}}</td>
-                <td>{{id_project}}</td>
                 <td>{{status}}</td>
             </tr>
             {{/each}}

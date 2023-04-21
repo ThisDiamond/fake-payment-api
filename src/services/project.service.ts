@@ -3,9 +3,6 @@ import crypto from 'crypto'
 
 const prisma = new PrismaClient()
 
-const apiToken = crypto.randomBytes(16).toString('hex');
-const secretKey = crypto.randomBytes(32).toString('hex')
-
 export async function createProject(project_name: string, id_user: number) {
     return await prisma.projects.create({
         data: {
@@ -23,6 +20,7 @@ export async function getProjectbyUserId(id_user: number) {
         }
     })
 }
+
 export async function getProjectbyId(project_id: number) {
     return await prisma.projects.findMany({
         where: {
@@ -43,8 +41,8 @@ export async function getTransactionbyProjectId(project_id: number) {
 export async function generateApiKey(id_project: number, id_user: number) {
     return await prisma.apiToken.create({
         data: {
-            apiToken: apiToken,
-            secretKey: secretKey,
+            apiToken: crypto.randomBytes(16).toString('hex'),
+            secretKey: crypto.randomBytes(32).toString('hex'),
             status: 'Active',
             id_project: id_project,
             id_user: id_user

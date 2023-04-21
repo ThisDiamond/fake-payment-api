@@ -4,7 +4,9 @@ import { engine } from "express-handlebars";
 import session from "express-session";
 import flash from "connect-flash";
 import cookieParser from "cookie-parser";
-import hbsHelpers from './helpers/ifequal'
+
+// helpers
+import ifEqual from './helpers/ifequal'
 
 // Router
 import auth from "./routes/auth";
@@ -14,6 +16,7 @@ import admin from "./routes/admin";
 import pay from './routes/pay'
 
 const app: Express = express();
+
 
 // Middlerwares
 app.use(cors());
@@ -25,7 +28,7 @@ app.use(flash());
 app.use(cookieParser());
 
 // handlerbars
-app.engine("hbs", engine({ extname: ".hbs", helpers: hbsHelpers }));
+app.engine("hbs", engine({ extname: ".hbs", helpers: ifEqual }));
 app.set("view engine", "hbs");
 app.set("views", "./src/views");
 

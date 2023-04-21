@@ -38,8 +38,8 @@ model projects {
 
 model apiToken {
   id         Int    @id @default(autoincrement())
-  apiToken   String @unique
-  secretKey  String @unique
+  apiToken   String 
+  secretKey  String 
   status     String
   id_project Int
   id_user    Int

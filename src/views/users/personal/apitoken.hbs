@@ -1,25 +1,27 @@
 <h2 class="title"> All Api Token and Secret key</h2>
 
 <hr>
-<table>
-    <thead>
-        <tr>
-            <th> ID </th>
-            <th> Api token </th>
-            <th> Secret Key </th>
-            <th> id project </th>
-            <th> Status </th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each apiTokens}}
-        <tr>
-            <td>{{@index}}</td>
-            <td>{{apiToken}}</td>
-            <td>{{secretKey}}</td>
-            <td>{{id_project}}</td>
-            <td>{{status}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div class="table-wrapper-api">
+    <table>
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Api token </th>
+                <th> Secret Key </th>
+                <th> id project </th>
+                <th> Status </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each apiTokens}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{apiToken}}</td>
+                <td>{{secretKey}}</td>
+                <td>{{id_project}}</td>
+                <td>{{status}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

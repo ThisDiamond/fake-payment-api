@@ -1,14 +1,16 @@
 import { Request, Response, NextFunction } from "express";
-import { getProjectbyUserId, getTransactionbyProjectId, getProjectbyId } from "../../services/project.service";
+import { getProjectbyUserId, getTransactionbyProjectId } from "../../services/project.service";
 import moment from "moment";
 import { PrismaClient } from "@prisma/client"
+import { getTransactionbyUserId } from "../../services/pay.service";
 
 const prisma = new PrismaClient()
 
 export default async (req: Request, res: Response, next: NextFunction) => {
     const params: string = req.params.project
-    const project = await getProjectbyUserId(Number(res.locals.id_user))
-    const alltransactions = await prisma.transactions.findMany()
+    const id_user = Number(res.locals.id_user)
+    const project = await getProjectbyUserId(id_user)
+    const alltransactions = await getTransactionbyUserId(id_user)
 
     if (params) {
         const getProject = project.find(project => project.name === params)

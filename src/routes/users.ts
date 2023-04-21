@@ -15,5 +15,6 @@ router.get("/users/personal/settings", isAuthentication, settings)
 
 router.get('/users/personal/create', isAuthentication, create)
 router.post('/users/personal/create', isAuthentication, postCreate)
+router.get('/users/personal/generateapitoken/', isAuthentication, getGenerateapikey)
 router.get('/users/personal/generateapitoken/:id', isAuthentication, getGenerateapikey)
 export default router;

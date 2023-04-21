@@ -1,10 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { PrismaClient } from "@prisma/client"
 import moment from "moment";
-import { getAllProjectbyId, getAllProjectbyIdUser } from "../../services/project.service";
+import { getAllProjectbyIdUser } from "../../services/project.service";
 import { getAllTransactionbyId, getAllTransactionbyUserId } from "../../services/transaction.service";
 
-const prisma = new PrismaClient()
 
 export default async (req: Request, res: Response, next: NextFunction) => {
     const params: string = req.params.project

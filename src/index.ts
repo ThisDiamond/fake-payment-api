@@ -17,7 +17,6 @@ import pay from './routes/pay'
 
 const app: Express = express();
 
-
 // Middlerwares
 app.use(cors());
 app.use(express.json());
@@ -38,8 +37,6 @@ app.use(auth);
 app.use(users);
 app.use(admin);
 app.use(pay)
-
-
 
 // PORT
 const PORT = process.env.PORT || 1112;

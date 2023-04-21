@@ -25,6 +25,7 @@ export async function getOneApiTokenbyIdProject(id_project: number) {
         }
     })
 }
+
 export async function getAllApiTokenbyIdProject(id_project: number) {
     return await prisma.apiToken.findMany({
         where: {
@@ -32,6 +33,28 @@ export async function getAllApiTokenbyIdProject(id_project: number) {
         }
     })
 }
+export async function getOneApiTokenbyIdProjectAndIdUser(id_project: number, id_user: number) {
+    return await prisma.apiToken.findFirst({
+        where: {
+            AND: [
+                { id_project: id_project },
+                { id_user: id_user }
+            ]
+        }
+    })
+}
+
+export async function getAllApiTokenbyIdProjectAndIdUser(id_project: number, id_user: number) {
+    return await prisma.apiToken.findMany({
+        where: {
+            AND: [
+                { id_project: id_project },
+                { id_user: id_user }
+            ]
+        }
+    })
+}
+
 
 
 export async function generateApiKey(id_project: number, id_user: number) {

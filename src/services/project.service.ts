@@ -59,3 +59,33 @@ export async function getOneProjectbyName(project_name: string) {
         }
     })
 }
+
+export async function getAllProjectbyName(project_name: string) {
+    return await prisma.projects.findMany({
+        where: {
+            name: project_name
+        }
+    })
+}
+
+export async function getOneProjectbyNameAndIdUser(project_name: string, id_user: number) {
+    return await prisma.projects.findFirst({
+        where: {
+            AND: [
+                { name: project_name },
+                { id_user: id_user }
+            ]
+        }
+    })
+}
+
+export async function getAllProjectbyNameAndIdUser(project_name: string, id_user: number) {
+    return await prisma.projects.findMany({
+        where: {
+            AND: [
+                { name: project_name },
+                { id_user: id_user }
+            ]
+        }
+    })
+}

@@ -1,17 +1,19 @@
 import { Request, Response, NextFunction } from "express";
-import { getUserbyUserId } from "../../services/users.service";
+import { getOneUserbyUserId } from "../../services/users.service";
 import { getWalletbyUserId } from "../../services/pay.service";
 import moment from 'moment'
-import { getOneTransactionbyIdProject, getAllTransactionbyUserId } from "../../services/transaction.service";
+import { getAllTransactionbyUserId } from "../../services/transaction.service";
+import { getAllProjectbyIdUser } from "../../services/project.service";
 
 
 export default async (req: Request, res: Response, next: NextFunction) => {
     const id_user = Number(res.locals.id_user)
 
-    const project = await getOneTransactionbyIdProject(id_user)
+    const project = await getAllProjectbyIdUser(id_user)
+
     const alltransactions = await getAllTransactionbyUserId(id_user)
 
-    const user = await getUserbyUserId(id_user)
+    const user = await getOneUserbyUserId(id_user)
     const wallet = await getWalletbyUserId(id_user)
 
     const userData = [user]

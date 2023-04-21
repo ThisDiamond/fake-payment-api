@@ -6,10 +6,9 @@ import { getOneProjectbyId } from "../../services/project.service";
 
 export default async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const id = Number(req.params.id)
+        const id: number | undefined = Number(req.params.id)
 
-        const project = await getOneProjectbyId(id)
-
+        const project = await getOneProjectbyId(+(id))
         const projectUrl = project?.name
 
         const tokens = await getAllApiTokenbyIdProject(Number(project?.id))
@@ -20,7 +19,7 @@ export default async (req: Request, res: Response, next: NextFunction) => {
             return
         }
 
-        await generateApiKey(id, Number(res.locals.id_user))
+        await generateApiKey(+(id), Number(res.locals.id_user))
 
         res.redirect(`/users/personal/apitoken/${projectUrl}`)
     } catch (error) {

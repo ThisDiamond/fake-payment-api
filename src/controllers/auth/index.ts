@@ -1,3 +1,6 @@
 export { default as postLogin } from './Login.controller'
 export { default as postRegister } from './Register.controller'
 export { default as Verify } from './Verify.controller'
+export { default as getLogin } from './getLogin'
+export { default as getRegister } from './getRegister'
+export { default as logout } from './logout'

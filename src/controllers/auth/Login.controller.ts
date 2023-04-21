@@ -1,10 +1,7 @@
 import { Request, Response, NextFunction } from "express";
-import { PrismaClient } from "@prisma/client";
 import { generateJWTToken } from "../../services/token.service";
 import { findUserByEmail } from "../../services/users.service";
 import { schemaLogin, LoginJoi } from "../../validation/user.validation";
-
-const prisma = new PrismaClient();
 
 export default (req: Request, res: Response, next: NextFunction) => {
   try {

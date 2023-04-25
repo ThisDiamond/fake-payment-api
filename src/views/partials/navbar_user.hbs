@@ -1,0 +1,36 @@
+<header>
+    <div class="logo-area">
+        Pay<span>Chain</span> 
+    </div>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="/users/personal/dashboard">Dashboard</a>
+        </li>
+        {{!-- <li class="nav-item">
+            <a href="/users/personal/send">Send</a>
+        </li> --}}
+        <li class="nav-item">
+            <a href="/users/personal/transaction">Transaction</a>
+        </li>
+        <li class="nav-item">
+            <a href="/users/personal/apitoken">API token</a>
+        </li>
+        <li class="nav-item">
+            <a href="/users/personal/settings">Settings</a>
+        </li>
+        <li class="nav-item docs">
+            <a href="/users/personal/docs">Documentation</a>
+        </li>
+    </ul>
+    <div class="user">
+        <i class="bi bi-bell"></i>
+        <i class="bi bi-wallet2"></i>
+        <div class="avatar">
+            <i class="bi bi-person-circle"></i>
+            {{userName}}
+        </div>
+        <a href="/logout" class="logout">
+            <i class="bi bi-box-arrow-right"></i>
+        </a>
+    </div>
+</header>

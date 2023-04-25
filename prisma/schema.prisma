@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id        Int    @id @default(autoincrement())
+  firstname String
+  lastname  String
+  email     String @unique
+  password  String
+  user_type String
+}
+
+model wallet {
+  id       Int    @id @default(autoincrement())
+  amount   Int
+  address  BigInt @unique
+  code     Int    @unique
+  currency String
+  status   String
+  id_user  Int
+}
+
+model projects {
+  id      Int    @id @default(autoincrement())
+  name    String
+  status  String
+  id_user Int
+}
+
+model apiToken {
+  id         Int    @id @default(autoincrement())
+  apiToken   String
+  secretKey  String
+  status     String
+  id_project Int
+  id_user    Int
+}
+
+model transactions {
+  id          Int      @id @default(autoincrement())
+  date        DateTime
+  transfer    Int
+  send_card   BigInt
+  accept_card BigInt
+  pay_url     String
+  status      String
+  project_id  Int
+  id_user     Int
+}

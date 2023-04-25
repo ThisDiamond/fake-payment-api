@@ -1,0 +1,110 @@
+{{!-- <h2 class="title">Dashboard | Statistic</h2>
+<hr> --}}
+
+<div class="dashboard">
+    <div class="balans">
+        <h3>YOUR BALANCE</h3>
+        <h1>{{amount}} uzs</h1>
+    </div>
+    <div class="lastWeekTransaction">
+        Last Week Transactions
+    </div>
+
+    {{!-- card end --}}
+    <div class="pay-checkout dash">
+        <div class="card-pay-checkout ">
+            <div class="front">
+                <div class="image">
+                    <img src="../../image/chip.png" alt="">
+                    <img src="../../image/paychain.png" alt="">
+                </div>
+                <div class="card-number-box">
+                    {{#each walletData}}
+                    <p> {{address}}</p>
+                    {{/each}}
+                </div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span>card holder</span>
+                        <div class="card-holder-name">
+                            {{#each userData}}
+                            <p>{{firstname}} {{lastname}} </p>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="box">
+                        <span>expires</span>
+                        <div class="expiration">
+                            <span class="exp-month">01 /</span>
+                            <span class="exp-year">2030</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>code</span>
+                    <div class="cvv-box">
+                        {{#each walletData}}
+                        <p>{{code}}</p>
+                        {{/each}}
+                    </div>
+                    <img src="image/visa.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    {{!-- card end --}}
+</div>
+
+<h2 class="title d">Previous Transactions</h2>
+
+<div class="dashboardTable">
+    <table>
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Client </th>
+                <th> Date </th>
+                <th> Amount </th>
+                <th> Status </th>
+                <th> Pay Url </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each alltransactions}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{send_card }}</td>
+                <td>{{date}}</td>
+                <td>{{transfer}}</td>
+                <td>{{status}}</td>
+                <td>{{pay_url}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const front = document.querySelector('.front');
+    const back = document.querySelector('.back');
+
+    document.querySelector('.pay-checkout').addEventListener('click', () => {
+        const frontRotation = Number(front.style.transform.replace(/.*rotateY\(([-\d]+)deg\).*/, '$1'));
+        const backRotation = Number(back.style.transform.replace(/.*rotateY\(([-\d]+)deg\).*/, '$1'));
+
+        if (frontRotation === -180 && backRotation === 0) {
+            front.style.transform = 'perspective(1000px) rotateY(0deg)';
+            back.style.transform = 'perspective(1000px) rotateY(180deg)';
+        } else {
+            front.style.transform = 'perspective(1000px) rotateY(-180deg)';
+            back.style.transform = 'perspective(1000px) rotateY(0deg)';
+        }
+    });
+</script>

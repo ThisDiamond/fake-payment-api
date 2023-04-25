@@ -1,0 +1,1181 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEEE
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.nav {
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: all 500ms;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #252525;
+    padding: 5px 0;
+}
+
+.nav-item.docs {
+    background-color: #EEEEEE;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.nav-item.docs a {
+    color: black;
+}
+
+
+.logo-area {
+    font-size: x-large;
+}
+
+.logo-area span {
+    font-weight: 600;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0 0 20px;
+    font-size: x-large;
+    gap: 0 15px;
+}
+
+.user i {
+    margin-right: 5px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #EEEEEE;
+    padding: 7px 15px;
+    border-radius: 50px;
+    font-size: medium;
+}
+
+.avatar i {
+    font-size: large;
+}
+
+.logout {
+    background-color: #EEEEEE;
+    padding: 7px 12px;
+    border-radius: 100px;
+    font-size: large;
+}
+
+header .sign-in-index {
+    display: flex;
+    gap: 0 20px;
+}
+
+header .sign-in-index a {
+    color: #252525;
+    padding: 7px 21px;
+    text-decoration: none;
+    border: 1px solid #252525;
+    border-radius: 3px;
+}
+
+
+.form-sign {
+    background-color: white;
+    width: 500px;
+    min-height: 30vh;
+    margin: auto;
+    padding: 45px 75px;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 3px;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign h3 {
+    align-self: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sign h3 a {
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.sign h3 span {
+    background-color: #252525;
+    color: white;
+    padding: 3px 21px;
+    text-decoration: none;
+    align-self: center;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: 500ms;
+}
+
+/* unvisited link */
+.sign h3 a:link {
+    color: #252525;
+}
+
+/* visited link */
+.sign h3 a:visited {
+    color: #252525;
+}
+
+/* mouse over link */
+.sign h3 a:hover {
+    color: rgb(107, 107, 107);
+}
+
+/* selected link */
+.sign h3 a:active {
+    color: blue;
+
+}
+
+.sign hr {
+    align-self: center;
+    width: 96%;
+    border: 1px solid #bdbdbd;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sign .input-wrapper input {
+    width: 100%;
+    height: 40px;
+    padding: 7px 21px;
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    outline: none;
+}
+
+.sign select {
+    color: #a6a6a6;
+    width: 100%;
+    height: 40px;
+    padding: 7px 21px;
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    outline: none;
+}
+
+.sign select option {
+    border-radius: 3px;
+}
+
+.sign button {
+    align-self: center;
+    background-color: #252525;
+    color: white;
+    width: fit-content;
+    height: 40px;
+    padding: 7px 42px;
+    margin: 10px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* personal */
+
+.wrapper {
+    width: 960px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-area {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    overflow-y: auto;
+    background-color: white;
+    min-width: 450px;
+    min-height: 220px;
+    max-height: 220px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.history {
+    overflow-y: auto;
+    background-color: white;
+    min-width: 450px;
+    min-height: 250px;
+    max-height: 720px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.card.balans h3 {
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.card.balans h3 span {
+    font-weight: 700;
+}
+
+/* user aside */
+aside {
+    min-width: 220px;
+    max-width: 250px;
+    height: 100%;
+    background-color: white;
+    align-self: baseline;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+aside .title {
+    align-self: center;
+    padding: 12px;
+    font-weight: 500;
+}
+
+aside ul li {
+    list-style-type: none;
+    width: 100%;
+    min-height: 60px;
+    padding: 15px;
+    transition: 500ms;
+}
+
+aside hr {
+    border: 1px solid #dfdfdf;
+}
+
+aside ul a {
+    text-decoration: none;
+}
+
+aside ul li:hover {
+    background-color: #eeeeee;
+}
+
+aside ul li i {
+    font-size: large;
+    margin: 0 10px;
+}
+
+.truncated-text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+section .title {
+    padding: 12px;
+    font-weight: 500;
+}
+
+section hr {
+    border: 1px solid #dfdfdf;
+}
+
+table {
+    margin: 1%;
+    width: 98%;
+}
+
+table,
+td,
+th {
+    border: 1px solid #a8a8a83d;
+    border-collapse: collapse;
+    padding: 10px 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+th {
+    background-color: #EEEEEE;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.width-md {
+    width: 400px;
+}
+
+button.wide {
+    width: 100%;
+}
+
+/* Dashboard */
+.dashboard {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.dashboardTable {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.title.d {
+    margin-left: 10px;
+}
+
+.balans {
+    width: 350px;
+    height: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.balans h3 {
+    font-weight: 500;
+}
+
+.balans h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.lastWeekTransaction {
+    flex-grow: 1;
+    height: 100%;
+    background-color: #EEEEEE;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cards {
+    width: 400px;
+    height: 250px;
+    background-color: #D4F8F2;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+.card-container {
+    width: 350px;
+    height: 250px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.card-face,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+
+.card-face {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.card-number {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 90px 0 0 0;
+}
+
+.card-number h2 {
+    font-size: larger;
+}
+
+.card-details {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-name,
+.card-expiry {
+    font-size: 16px;
+}
+
+.card-expiry {
+    text-align: right;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-cvv {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.card-cvv h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.card-cvv p {
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.card-container:hover .card-face {
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Api token */
+
+.table-wrapper-api {
+    overflow-y: auto;
+    max-height: 84vh;
+}
+
+.apitoken-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apitoken-header a {
+    background-color: #EEEEEE;
+    color: #252525;
+    margin-right: 15px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+.apitoken-header a i {
+    margin-right: 5px;
+}
+
+
+/* for background */
+.mainWelcome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 100px;
+    gap: 50px;
+}
+
+.mainWelcome .content {
+    width: 45%;
+    flex-grow: 2;
+}
+
+
+.mainWelcome .content h1 {
+    font-weight: 500;
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+.mainWelcome .content h3 {
+    font-weight: 500;
+    font-size: 42px;
+    margin-top: 50px;
+}
+
+.mainWelcome .content p {
+
+    font-weight: 400;
+    font-size: 21px;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .mainWelcome {
+        padding: 20px 80px;
+    }
+
+    .mainWelcome .content {
+        width: 90vh;
+    }
+
+    .mainWelcome .content h1 {
+        font-size: 56px;
+    }
+
+    .mainWelcome .content h3 {
+        font-size: 36px;
+    }
+
+}
+
+@media only screen and (max-width: 1366px) {
+    .mainWelcome {
+        padding: 20px 60px;
+    }
+
+    .mainWelcome .content {
+        width: 100vh;
+    }
+
+    .mainWelcome .content h1 {
+        font-size: 40px;
+    }
+
+    .mainWelcome .content h3 {
+        font-size: 24px;
+    }
+
+}
+
+.container {
+    align-self: center;
+    flex-grow: 3;
+    width: 70vh;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#redblocks>* {
+    transform: translate3d(160px, -93px, 0);
+    animation: moveblocks 4s 1s ease infinite;
+}
+
+@keyframes moveblocks {
+    0% {
+        transform: translate3d(160px, -93px, 0);
+    }
+
+    50%,
+    100% {
+        transform: translate(0);
+    }
+}
+
+#firstBlock {
+    transform: translate3d(160px, -93px, 0);
+    animation: firstBlock 4s 1s ease infinite;
+}
+
+#blockdis {
+    animation: blockdis 4s 1s ease infinite;
+}
+
+@keyframes blockdis {
+    30% {
+        opacity: 1;
+    }
+
+    40%,
+    100% {
+        opacity: 0;
+        transform: translate3d(-160px, 93px, 0);
+    }
+}
+
+@keyframes firstBlock {
+
+    0%,
+    15% {
+        opacity: 0;
+    }
+
+    40%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@for $i from 1 to 5 {
+    #redblocksparticles g:nth-child(#{$i}) polygon {
+        opacity: 0.35;
+        animation: glow 4s 1s ease infinite;
+    }
+}
+
+@for $i from 1 to 20 {
+    #redblocksparticles g:nth-child(1) g circle:nth-child(#{$i}) {
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+
+    #redblocksparticles g:nth-child(2) g circle:nth-child(#{$i}) {
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+
+    #redblocksparticles g:nth-child(3) g circle:nth-child(#{$i}) {
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+
+    #redblocksparticles g:nth-child(4) g circle:nth-child(#{$i}) {
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    45% {
+        opacity: 0;
+    }
+
+    60%,
+    100% {
+        opacity: 0.35;
+    }
+}
+
+@keyframes dots {
+
+    0%,
+    35% {
+        transform: translate(0);
+        opacity: 0;
+    }
+
+    60%,
+    80% {
+        transform: translate(55px, -35px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(55px, -35px);
+        opacity: 0;
+    }
+}
+
+@for $i from 1 to 22 {
+    #purplebg> :nth-child(#{$i}) {
+        animation: up 2s #{$i* 500}ms ease infinite alternate;
+    }
+}
+
+@keyframes up {
+    to {
+        transform: translate(0, -25px);
+    }
+}
+
+@for $i from 1 to 13 {
+    #bottomparticles> :nth-child(#{$i}) {
+        animation: particles 4s #{$i*300}ms ease infinite alternate,
+        p 2s ease infinite alternate;
+    }
+
+    #bottomparticles2> :nth-child(#{$i}) {
+        animation: particles 4s #{$i*300}ms ease infinite alternate,
+        p 2s ease infinite alternate;
+    }
+
+    #redglowparticles> :nth-child(#{$i}) {
+        animation: particles 4s #{$i*300}ms ease infinite alternate,
+        p 2s ease infinite alternate;
+    }
+
+}
+
+@keyframes p {
+
+    85%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes particles {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(10px, 15px);
+    }
+}
+
+.particlespoly {
+    animation: p 2s ease infinite alternate;
+}
+
+@for $i from 1 to 4 {
+    #d-app g:nth-child(#{$i}) {
+        animation: updown 2s #{$i*200}ms ease-in-out infinite alternate;
+    }
+}
+
+@for $i from 1 to 4 {
+    #d-apps2 g:nth-child(#{$i}) {
+        animation: updown 2s #{$i*200}ms ease-in-out infinite alternate;
+    }
+}
+
+@for $i from 1 to 20 {
+    #d-apps2wrapper g:nth-child(3) g>circle:nth-child(#{$i}) {
+        animation: updown 2s #{$i*50}ms ease infinite alternate;
+    }
+}
+
+@for $i from 1 to 20 {
+    #d-appswrapper g:nth-child(2) g>circle:nth-child(#{$i}) {
+        animation: updown 2s #{$i*50}ms ease infinite alternate;
+    }
+}
+
+
+@keyframes updown {
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+
+#Layer_1>g:nth-child(2)>g:nth-child(18)>g:nth-child(12) {
+    animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+
+@keyframes arrows {
+    to {
+        transform: translate(25px, 25px);
+    }
+}
+
+#Layer_1>g:nth-child(2)>g:nth-child(17)>g:nth-child(13) {
+    animation: arrows2 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+
+@keyframes arrows2 {
+    to {
+        transform: translate(-25px, -25px);
+    }
+}
+
+#Layer_1>g:nth-child(2)>g:nth-child(17)>g:nth-child(12) {
+    animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+
+/** card **/
+
+.pay-checkout-wrapper {
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+}
+
+.pay-checkout-receipt {
+    width: 300px;
+    min-height: 450px;
+    background: #dd5969;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px 0 0 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.receipt {
+    display: flex;
+    gap: 20px;
+    padding: 12px;
+    border-bottom: 2px solid #f48592;
+}
+
+.receipt .icon {
+    width: 24px;
+    margin: auto 0;
+    color: #eee;
+}
+
+.receipt .text {
+    flex-grow: 1;
+}
+
+.receipt .text span {
+    font-weight: 400;
+    color: #eee;
+}
+
+.receipt .text h3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #eee;
+}
+
+.receipt .text a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+    color: #eee;
+    text-decoration: none;
+}
+
+.pay-checkout-receipt .url {
+    color: #ffbebe;
+    align-self: center;
+    margin-top: auto;
+    font-size: 19px;
+    text-align: center;
+}
+
+.pay-checkout {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    padding-bottom: 75px;
+}
+.pay-checkout.dash{
+    min-height: 230px;
+}
+.pay-checkout form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0 3px 3px 0;
+    width: 480px;
+    min-height: 450px;
+    max-height: 450px;
+    padding: 20px;
+    border: 0.5px solid #ffbac2;
+    padding-top: 225px;
+}
+
+.pay-checkout form .inputBox {
+    margin-top: 00px;
+}
+
+.pay-checkout form .inputBox span {
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.pay-checkout form .inputBox input,
+.pay-checkout form .inputBox select {
+    width: 100%;
+    height: 40px;
+    padding: 7px 21px;
+    margin: 7px 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    outline: none;
+}
+
+.pay-checkout form .flexbox {
+    display: flex;
+    gap: 15px;
+}
+
+.pay-checkout form .flexbox .inputBox {
+    flex: 1 1 150px;
+}
+
+.pay-checkout form .submit-btn {
+    align-self: center;
+    background-color: #dd5969;
+    color: white;
+    width: fit-content;
+    height: 40px;
+    padding: 7px 42px;
+    margin: 10px 0;
+    margin-bottom: 0;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+
+.pay-checkout .card-pay-checkout {
+    margin-bottom: -150px;
+    position: relative;
+    height: 230px;
+    width: 380px;
+}
+
+.pay-checkout .card-pay-checkout .front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(160deg, #D93446 0%, #dd5969 100%);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 30px #ffc9d0;
+    padding: 20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .5s ease;
+}
+
+.pay-checkout .card-pay-checkout .front .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.pay-checkout .card-pay-checkout .front .image img {
+    height: 50px;
+}
+
+.pay-checkout .card-pay-checkout .front .card-number-box {
+    padding: 20px 0;
+    padding-bottom: 5px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.pay-checkout .card-pay-checkout .front .card-number-box p {
+    font-size: 32px;
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.pay-checkout .card-pay-checkout .front .flexbox {
+    display: flex;
+}
+
+.pay-checkout .card-pay-checkout .front .flexbox .box:nth-child(1) {
+    margin-right: auto;
+}
+
+.pay-checkout .card-pay-checkout .front .flexbox .box {
+    font-size: 15px;
+    color: #fff;
+}
+
+.pay-checkout .card-pay-checkout .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(160deg, #D93446 0%, #dd5969 100%);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 30px #ffc9d0;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .5s ease;
+}
+
+.pay-checkout .card-pay-checkout .back .stripe {
+    background: #252525;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.pay-checkout .card-pay-checkout .back .box {
+    padding: 0 20px;
+}
+
+.pay-checkout .card-pay-checkout .back .box span {
+    color: #fff;
+    font-size: 15px;
+}
+
+.pay-checkout .card-pay-checkout .back .box .cvv-box {
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.pay-checkout .card-pay-checkout .back .box img {
+    margin-top: 30px;
+    height: 30px;
+}
+
+.success-h1 {
+    color: #7CC531;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.success-h1-f {
+    color: crimson;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.success-p {
+    color: #404F5E;
+    font-size: 20px;
+    margin: 0;
+}
+
+.success-i {
+    color: #9ABC66;
+    font-size: 96px;
+    line-height: 200px;
+    margin-left: -15px;
+}
+
+.success-i-f {
+    color: crimson;
+    font-size: 96px;
+    line-height: 200px;
+    margin-left: -15px;
+}
+
+.success-card {
+    width: 400px;
+    min-height: 500px;
+    background: white;
+    padding: 50px 30px;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.success-card-circle {
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    background: #e9ffc7;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-card-circle-f {
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    background: #ffdcdc;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

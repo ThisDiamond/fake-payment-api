@@ -1,0 +1,156 @@
+<div class="pay-checkout-wrapper">
+    <div class="pay-checkout-receipt">
+        <div class="receipt">
+            <div class="text">
+                <span>Receipt for</span>
+                <h3>{{project_name}}</h3>
+            </div>
+        </div>
+        <div class="receipt">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#eee" class="bi bi-wallet2"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                </svg>
+            </div>
+            <div class="text">
+                <span>Amount:</span>
+                <h3>{{amount}} uzs</h3>
+            </div>
+        </div>
+        <div class="receipt">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#eee" class="bi bi-calendar3"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                    <path
+                        d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+            </div>
+            <div class="text">
+                <span>Date:</span>
+                <h3>{{date}}</h3>
+            </div>
+        </div>
+        {{!-- <div class="receipt">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#eee" class="bi bi-card-checklist"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path
+                        d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div>
+            <div class="text">
+                <span>Address transaction</span>
+                <a href="#" title="{{transactionAdress}}">{{transactionAdress}}</a>
+            </div>
+        </div> --}}
+        <div class="url">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eee" class="bi bi-c-circle"
+                viewBox="0 0 16 16">
+                <path
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z" />
+            </svg>
+            Paychain
+        </div>
+    </div>
+    <div class="pay-checkout">
+        <div class="card-pay-checkout">
+            <div class="front">
+                <div class="image">
+                    <img src="../image/chip.png" alt="">
+                    <img src="../image/paychain.png" alt="">
+                </div>
+                <div class="card-number-box">#### #### #### ####</div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span>card holder</span>
+                        <div class="card-holder-name"> {{user_name}} </div>
+                    </div>
+                    <div class="box">
+                        <span>expires</span>
+                        <div class="expiration">
+                            <span class="exp-month">01 /</span>
+                            <span class="exp-year">2030</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>code</span>
+                    <div class="cvv-box"></div>
+                    <img src="image/visa.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <form action="/pay-checkout" method="post">
+
+            {{#ifEqual isAuth undefined}}
+            <div class="inputBox">
+                <input name="email" type="email" class="card-holder-input" placeholder="Email:*">
+            </div>
+            <div class="inputBox">
+                <input name="password" type="password" class="card-holder-input" placeholder="Password:*">
+            </div>
+            {{#if msgErrorPay}}
+            <p style=" background-color: rgb(255, 219, 226);padding:6px 24px; color: crimson; font-size:medium">
+                {{msgErrorPay}}
+            </p>
+            {{/if}}
+            <input type="submit" value="Login" class="submit-btn">
+            {{else}}
+            <div class="inputBox">
+                <input name="cardNumber" type="text" maxlength="16" class="card-number-input"
+                    placeholder="Card number:*">
+            </div>
+            <div class="inputBox">
+                <input name="cardCode" type="password" maxlength="4" class="cvv-input" placeholder="code:*">
+            </div>
+            {{#if msgErrorPay}}
+            <p style=" background-color: rgb(255, 219, 226);padding:6px 24px; color: crimson; font-size:medium">
+                {{msgErrorPay}}
+            </p>
+            {{/if}}
+            <input type="submit" value="PAY" class="submit-btn">
+            {{/ifEqual}}
+
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+
+    document.querySelector('.card-number-input').oninput = () => {
+        document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+    }
+
+    document.querySelector('.card-holder-input').oninput = () => {
+        document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+    }
+
+    document.querySelector('.cvv-input').onmouseenter = () => {
+        document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+    }
+
+    document.querySelector('.cvv-input').onmouseleave = () => {
+        document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+    }
+
+    document.querySelector('.cvv-input').oninput = () => {
+        document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+    }
+
+</script>

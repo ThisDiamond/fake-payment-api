@@ -36,11 +36,7 @@ export function getWalletbyAddress(address: number) {
     })
 }
 
-<<<<<<< HEAD
 export async function transfer_sender_to_receipter(card_accept: number, transfer_sum: number, card_send: number) {
-=======
-export async function send(card_accept: number, transfer_sum: number, card_send: number) {
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
     try {
         return await prisma.$transaction([
             prisma.wallet.update({

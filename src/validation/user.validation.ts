@@ -5,10 +5,6 @@ export interface RegJoi {
     lastname: string;
     email: string;
     password: string;
-<<<<<<< HEAD
-=======
-    w_type: string;
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 }
 
 export interface LoginJoi {
@@ -16,7 +12,6 @@ export interface LoginJoi {
     password: string;
 }
 
-<<<<<<< HEAD
 export interface ChangePassword {
     oldpassword: string;
     newpassword: string;
@@ -28,8 +23,6 @@ export interface payCheckout {
     cardCode: number;
 }
 
-=======
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 export const schemaRegister = Joi.object<RegJoi>({
     firstname: Joi.string()
         .required()
@@ -51,20 +44,8 @@ export const schemaRegister = Joi.object<RegJoi>({
         .min(6)
         .max(32)
         .regex(/^[a-zA-Z0-9]{6,32}$/),
-<<<<<<< HEAD
 })
 
-=======
-    // w_type: Joi.string()
-    //     .required()
-    //     .min(4)
-    //     .max(16)
-    //     .pattern(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/),
-})
-
-
-
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 export const schemaLogin = Joi.object<LoginJoi>({
     email: Joi.string()
         .required()
@@ -76,7 +57,6 @@ export const schemaLogin = Joi.object<LoginJoi>({
         .min(6)
         .max(32)
         .regex(/^[a-zA-Z0-9]{6,32}$/),
-<<<<<<< HEAD
 });
 
 export const schemaChangePassword = Joi.object<ChangePassword>({
@@ -107,6 +87,3 @@ export const schemaPayCheckout = Joi.object<payCheckout>({
         .min(1000)
         .max(9999)
 })
-=======
-});
->>>>>>> b8b03c93058f585878211f88e5318afe233416af

@@ -30,50 +30,29 @@ model wallet {
 }
 
 model projects {
-<<<<<<< HEAD
   id      Int    @id @default(autoincrement())
   name    String
   status  String
   id_user Int
-=======
-  id         Int    @id @default(autoincrement())
-  name       String
-  status     String
-  id_user    Int
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 }
 
 model apiToken {
   id         Int    @id @default(autoincrement())
-<<<<<<< HEAD
   apiToken   String
   secretKey  String
-=======
-  apiToken   String 
-  secretKey  String 
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
   status     String
   id_project Int
   id_user    Int
 }
 
 model transactions {
-<<<<<<< HEAD
   id          Int      @id @default(autoincrement())
-=======
-  id          Int      @id @default(autoincrement())  //
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
   date        DateTime
   transfer    Int
   send_card   BigInt
   accept_card BigInt
   pay_url     String
   status      String
-<<<<<<< HEAD
   project_id  Int
   id_user     Int
-=======
-  project_id  Int                                     //
-  id_user     Int                                     //
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 }

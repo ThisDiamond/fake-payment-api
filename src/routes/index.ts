@@ -7,8 +7,4 @@ router.get("/", (req: Request, res: Response) => {
     })
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 export default router;

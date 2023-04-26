@@ -5,13 +5,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
     outline: none;
     border: none;
     text-decoration: none;
-=======
-    color: #252525;
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 }
 
 body {
@@ -190,10 +186,7 @@ header .sign-in-index a {
 }
 
 .sign hr {
-<<<<<<< HEAD
     align-self: center;
-=======
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
     width: 96%;
     border: 1px solid #bdbdbd;
     border-radius: 100px;
@@ -577,20 +570,12 @@ button.wide {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 100px;
-<<<<<<< HEAD
     gap: 50px;
 }
 
 .mainWelcome .content {
     width: 45%;
     flex-grow: 2;
-=======
-    gap: 20px;
-}
-
-.mainWelcome .content {
-    width: 80vh;
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 }
 
 
@@ -653,10 +638,7 @@ button.wide {
 
 .container {
     align-self: center;
-<<<<<<< HEAD
     flex-grow: 3;
-=======
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
     width: 70vh;
     min-height: 60vh;
     display: flex;
@@ -879,7 +861,6 @@ button.wide {
 
 #Layer_1>g:nth-child(2)>g:nth-child(17)>g:nth-child(12) {
     animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
-<<<<<<< HEAD
 }
 
 /** card **/
@@ -1197,6 +1178,4 @@ button.wide {
     display: flex;
     align-items: center;
     justify-content: center;
-=======
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 }

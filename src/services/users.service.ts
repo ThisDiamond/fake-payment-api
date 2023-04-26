@@ -2,7 +2,6 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-<<<<<<< HEAD
 export async function createUser(firstname: string, lastname: string, email: string, password: string,) {
     return await prisma.users.create({
         data: {
@@ -14,8 +13,6 @@ export async function createUser(firstname: string, lastname: string, email: str
         }
     })
 }
-=======
->>>>>>> b8b03c93058f585878211f88e5318afe233416af
 export async function findUserByEmail(email: string) {
     return await prisma.users.findFirst({
         where: {
@@ -32,7 +29,6 @@ export async function getOneUserbyUserId(id_user: number) {
     })
 }
 
-<<<<<<< HEAD
 
 
 export async function getOldPasswordbyIdUser(id_user: number) {
@@ -53,16 +49,3 @@ export async function updatePassword(newPassword: string, id_user: number) {
         }
     })
 }
-=======
-export async function createUser(firstname: string, lastname: string, email: string, password: string,) {
-    return await prisma.users.create({
-        data: {
-            firstname,
-            lastname,
-            email,
-            password,
-            user_type: 'user'
-        }
-    })
-}
->>>>>>> b8b03c93058f585878211f88e5318afe233416af

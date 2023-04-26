@@ -30,12 +30,20 @@ export default async (req: Request, res: Response, next: NextFunction) => {
     }
 
     // create new user
+<<<<<<< HEAD
     const _createUser = await createUser(firstname, lastname, email.toLocaleLowerCase(), password)
+=======
+    const _createUser = await createUser(firstname, lastname, email, password)
+>>>>>>> b8b03c93058f585878211f88e5318afe233416af
     await createWallet(_createUser.id)
 
     // JWT token
     const token = generateJWTToken(_createUser.email);
+<<<<<<< HEAD
     res.cookie("token", token).redirect("/users/personal");
+=======
+    res.cookie("token", token).redirect("/login");
+>>>>>>> b8b03c93058f585878211f88e5318afe233416af
 
     if (!_createUser) {
       req.flash("error", `Server xatoligi, qaytadan urinib koring`);

@@ -10,6 +10,7 @@
         Last Week Transactions
     </div>
 
+<<<<<<< HEAD
     {{!-- card end --}}
     <div class="pay-checkout dash">
         <div class="card-pay-checkout ">
@@ -60,6 +61,43 @@
     </div>
 
     {{!-- card end --}}
+=======
+    <div class="cards">
+        <div class="card-container">
+            <div class="card-face">
+                <div class="card-logo">
+                    {{!-- <img
+                        src="https://banner2.cleanpng.com/20180712/vph/kisspng-computer-icons-credit-card-mastercard-american-exp-credit-card-icon-5b479a47818767.2875252415314192075306.jpg"
+                        alt="Credit Card Logo"> --}}
+                    <h4>PayChain</h4>
+                </div>
+                <div class="card-number">
+                    {{#each walletData}}
+                    <h2>{{address}}</h2>
+                    {{/each}}
+                </div>
+                <div class="card-details">
+                    <div class="card-name">
+                        {{#each userData}}
+                        <p>{{firstname}} {{lastname}} </p>
+                        {{/each}}
+                    </div>
+                    <div class="card-expiry">
+                        <p>01/01</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-back">
+                <div class="card-cvv">
+                    <h3>Code</h3>
+                    {{#each walletData}}
+                    <p>{{code}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> b8b03c93058f585878211f88e5318afe233416af
 </div>
 
 <h2 class="title d">Previous Transactions</h2>
@@ -89,6 +127,7 @@
             {{/each}}
         </tbody>
     </table>
+<<<<<<< HEAD
 </div>
 
 <script>
@@ -108,3 +147,6 @@
         }
     });
 </script>
+=======
+</div>
+>>>>>>> b8b03c93058f585878211f88e5318afe233416af

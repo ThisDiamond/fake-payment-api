@@ -21,7 +21,11 @@ const app: Express = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+<<<<<<< HEAD
 app.use('/', express.static("./public"));
+=======
+app.use(express.static("./public"));
+>>>>>>> b8b03c93058f585878211f88e5318afe233416af
 app.use(session({ secret: "secret", resave: false, saveUninitialized: false }));
 app.use(flash());
 app.use(cookieParser());
